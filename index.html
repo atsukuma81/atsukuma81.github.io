@@ -1,19 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>サンプルリンクページ</title>
-  </head>
-  <body>
-    <h1>GitHub Pages サンプルページ</h1>
-    <p>以下はサンプルのリンクです。</p>
-    <ul>
-      <li><a href="https://www.google.com/">Google ホームページ</a></li>
-      <li><a href="https://jcodeorg.github.io">jcodeorg ホームページ</a></li>
-      <li><a href="https://github.com/jcodeorg">GitHub Organization</a></li>
-      <li><a href="https://docs.github.com/ja/pages">GitHub Pages ドキュメント</a></li>
-      <li><a href="https://www.mozilla.org/ja/">Mozilla</a></li>
-    </ul>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python部 - 学習共有プラットフォーム (LXP)</title>
+    <!-- Tailwind CSS (見た目を綺麗にするためのスタイル) -->
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <!-- 1. ヘッダー（画面の上のタイトルバー） -->
+    <header class="bg-blue-600 text-white shadow-md">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                🐍 Python部 LXP
+            </h1>
+            <span class="text-sm bg-blue-700 px-3 py-1 rounded-full">みんなの活動共有ボード</span>
+        </div>
+    </header>
+
+    <!-- メインコンテンツのコンテナ -->
+    <main class="max-w-4xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- 左側：活動報告フォーム（GoogleフォームやTrinketへの動線案内） -->
+        <div class="md:col-span-1 space-y-4">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="font-bold text-lg text-gray-900 mb-3 flex items-center gap-2">
+                    📝 今日の活動を報告する
+                </h2>
+                <p class="text-sm text-gray-600 mb-4">
+                    部活の終わりに、今日の目標や作成したPythonプログラムのURLを報告しましょう！
+                </p>
+                <!-- 💡 運用メモ：ここにGoogleフォームなどのURLを貼ると便利です -->
+                <a href="https://google.com..." target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors shadow-sm">
+                    活動報告フォームを開く ↗
+                </a>
+            </div>
+
+            <!-- おすすめ学習リンク -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-gray-950 mb-2">🚀 クイックリンク</h3>
+                <ul class="text-sm space-y-2 text-blue-600">
+                    <li><a href="https://prog-8.com" target="_blank" class="hover:underline">・Progate (プロゲート)</a></li>
+                    <li><a href="https://trinket.io" target="_blank" class="hover:underline">・Trinket (Python実行環境)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 右側：タイムラインとソーシャルエリア（giscusを配置） -->
+        <div class="md:col-span-2 space-y-6">
+            
+            <!-- 2. お知らせ・使い方の説明ボード -->
+            <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl text-sm text-blue-800">
+                <p class="font-bold mb-1">💡 つかいかた</p>
+                <p>友達のプログラムのURLを見つけたら、クリックして遊んでみよう！</p>
+                <p>下のコメント欄やスタンプ（リアクション）で、「すごい！」「おもしろい！」を伝え合おう！</p>
+            </div>
+
+            <!-- 3. ソーシャル機能（giscus）の埋め込みエリア -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+                    💬 みんなのタイムライン & 交流広場
+                </h2>
+                
+                <!-- ⬇️ ここに【giscus公式サイトでコピーしたコード】をそのまま貼り付けてください -->
+                <script src="https://giscus.app/client.js"
+                        data-repo="atsukuma81/atsukuma81.github.io"
+                        data-repo-id="R_kgDOTp5gnA"
+                        data-category="Announcements"
+                        data-category-id="DIC_kwDOTp5gnM4DFax1"
+                        data-mapping="pathname"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="top"
+                        data-theme="preferred_color_scheme"
+                        data-lang="ja"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+                <!-- ⬆️ ここに【giscus公式サイトでコピーしたコード】をそのまま貼り付けてください -->
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="text-center py-8 text-xs text-gray-400">
+        &copy; 2026 Python部 LXP Project. All rights reserved.
+    </footer>
+
+</body>
 </html>
