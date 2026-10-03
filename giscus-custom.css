@@ -1,0 +1,5 @@
+@import url("https://giscus.app/themes/preferred_color_scheme.css");
+
+.gsc-comments > .gsc-comment-box:not(.gsc-comment-box-is-reply) {
+    display: none !important;
+}
