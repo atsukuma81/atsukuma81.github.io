@@ -3,3 +3,7 @@
 .gsc-comments > .gsc-comment-box:not(.gsc-comment-box-is-reply) {
     display: none !important;
 }
+
+.gsc-comment-author {
+    display: none !important;
+}
