@@ -9,7 +9,26 @@
     <style>
         .giscus, .giscus-frame {
             width: 100%;
+            max-width: 100%;
+        }
+
+        #giscusContainer {
+            max-height: 650px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 12px;
+            background: #fff;
+        }
+
+        #giscusContainer .giscus,
+        #giscusContainer .giscus-frame {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        #giscusContainer .giscus-frame {
             min-height: 400px;
+            height: auto;
         }
     </style>
 </head>
