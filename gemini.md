@@ -52,6 +52,10 @@ function doPost(e) {
       body += `**📝 説明・遊び方:**\n${description}\n`;
     }
 
+    // AIの返答をDiscussion本文に追加してから投稿
+    const aiComment = generateAiComment(title, description);
+    body += `\n### 🤖 AIからのコメント\n${aiComment}\n`;
+
     // Discussion 作成処理を実行
     const resultUrl = createGitHubDiscussion(discussionTitle, body);
 
