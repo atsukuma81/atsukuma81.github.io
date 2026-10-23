@@ -311,6 +311,7 @@
             statusMessage.classList.add('hidden');
 
             const formData = {
+                action: 'activity',
                 activityDate: document.getElementById('activityDate').value,
                 userIdentifier: document.getElementById('userIdentifier').value,
                 title: document.getElementById('title').value,
@@ -337,11 +338,6 @@
                     const currentDate = document.getElementById('activityDate').value;
                     form.reset();
                     document.getElementById('activityDate').value = currentDate;
-
-                    // 3秒後にページ再読み込みしてgiscusを最新化
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 3000);
                 } else {
                     throw new Error(result.message);
                 }
