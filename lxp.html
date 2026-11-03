@@ -248,10 +248,14 @@
                     const body = comment.body
                         .replace(/^\s*\*\*投稿番号:\s*\d+\*\*\s*/, '')
                         .replace(/^\s*###\s*/, '');
+                    const bodyCharacters = Array.from(body);
+                    const preview = bodyCharacters.length > 80
+                        ? `${bodyCharacters.slice(0, 80).join('')}…`
+                        : body;
                     const numberLabel = comment.number == null
                         ? '番号なし'
                         : `投稿番号: ${comment.number}`;
-                    const label = `${numberLabel} - ${body}`;
+                    const label = `${numberLabel} - ${preview}`;
                     replyTarget.add(new Option(label, comment.id));
                 });
                 replyTarget.disabled = false;
