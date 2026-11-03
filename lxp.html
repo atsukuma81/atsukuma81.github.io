@@ -245,7 +245,13 @@
 
                 replyTarget.add(new Option('返信するコメントを選択してください', ''));
                 comments.forEach((comment) => {
-                    const label = `${comment.author}: ${comment.body}`;
+                    const body = comment.body
+                        .replace(/^\s*\*\*投稿番号:\s*\d+\*\*\s*/, '')
+                        .replace(/^\s*###\s*/, '');
+                    const numberLabel = comment.number == null
+                        ? '番号なし'
+                        : `投稿番号: ${comment.number}`;
+                    const label = `${numberLabel} - ${body}`;
                     replyTarget.add(new Option(label, comment.id));
                 });
                 replyTarget.disabled = false;
