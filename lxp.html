@@ -348,6 +348,7 @@
                     const currentDate = document.getElementById('activityDate').value;
                     form.reset();
                     document.getElementById('activityDate').value = currentDate;
+                    window.setTimeout(() => window.location.reload(), 1500);
                 } else {
                     throw new Error(result.message);
                 }
